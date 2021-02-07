@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboad</title>
+    <script type="application/javascript">
+        function getIP(json) {
+          window.userIp = json.ip;
+        }
+      </script>
+      <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+      <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="user-box">
+        <div class="user-inner-box">
+            <h2>Welcome!</h2>
+            <div class="welcome-btns">
+                <span id="login-btn">Login</span>
+                <span id="signup-btn">Signup</span>
+            </div>
+            <div id="form-box"></div>
+        </div>
+    </div>
+    <main>
+        <header>
+            <h1>App Dashboad</h1>
+            <div class="login-box">
+                <div class="login-msg"></div>
+                <div class="logout-btn">logout</div>
+            </div>
+        </header>
+        <section id="dash-box"></section>
+        <section id="dash-popup"></section>
+        <footer>
+
+        </footer>
+    </main>
+    <script src="js/users.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
