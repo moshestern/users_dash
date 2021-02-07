@@ -8,7 +8,9 @@ let usersArr = [];
 
 if (window.localStorage.getItem('current') != null) {
     userBox.style.display = 'none';
-    loginMsg.innerHTML = 'Welcome ' + window.localStorage.getItem('current');
+    let currentName = window.localStorage.getItem('current');
+    currentName = currentName.charAt(0).toUpperCase() + currentName.slice(1)
+    loginMsg.innerHTML = `Welcome ${currentName}!`;
 }
 
 const userForm = (btn, id, signup) => {
